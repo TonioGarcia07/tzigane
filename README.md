@@ -1,7 +1,7 @@
 # TZIGANE
 
 A Bokeh based application to visualize and edit timeseries.
-It aims at creating higher-level and easy-to-use objects, specificially for Infinite Uptime needs. It packs a number of predefined data visualizations templates, along with edition toolbars. 
+It aims at creating higher-level and easy-to-use objects. It packs a number of predefined data visualizations templates, along with edition toolbars. 
 
 ## Objectives
 - Annotate Time Series for supervised learning
@@ -13,16 +13,7 @@ It aims at creating higher-level and easy-to-use objects, specificially for Infi
 ## Content of the repository
 - static : static objects for the browser visualization
 - templates: templates for the visualization
-- .heroku-financial-app: working Bokeh deployment on Heroku (based on https://github.com/blakeboswell/heroku-financial-app)
-- .tzigane-heroku : folder for the deployment of Tzigane on Heroku:
-    - lib : includes dataforge / tigane / dataforge. Dataforge needs a special treatment for 3 modules:
-        - baseschemas / reporting / summary (see the README.md of the forlder)
-    - cloudsql :  has to be there even if it's empty because we need it for the unix sockets and we can't mkdir on Heroku.
-    - prod-ac1c3416cbdd.json : credentials of the service account used to connect to GAE.
-    - app.py : similar to main.py from tzigane (except for the imports / pre-treatment).
-    - Procfile : Heroku configuration.
-- tzigane
-
+- tzigane: objects' definitions.
 
 ## How to run Tzigane
  [$ git clone <link to git repo>]
