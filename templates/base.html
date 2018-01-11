@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.9.min.css"
+    rel="stylesheet" type="text/css">
+<link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.9.min.css"
+    rel="stylesheet" type="text/css">
+
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.9.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.9.min.js"></script>
+  <title> {{ title }} </title>
+
+</head>
+<body>
+<style>
+    #overlay {
+        background: #ffffff;
+        color: #666666;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 4000;
+        top: 0;
+        left: 0;
+        float: left;
+        text-align: center;
+        padding-top: 25%;
+    }
+</style>
+
+<div id="overlay">
+    <img src="/static/iuspinner.gif" alt="Loading" /><br/>
+    Loading...
+</div>
+
+<script>
+$(window).load(function() {
+	$("#overlay").fadeOut("slow");;
+});
+</script>
+
+
+{{ script|safe }}
+{{ div|safe }}
+
+
+</body>
+</html>
